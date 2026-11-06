@@ -1,0 +1,7 @@
+.noteMath { min-width:0; }
+.noteMath :global(.katex) { font-size:1.1em; line-height:1.4; text-indent:0; }
+.noteMath :global(.katex-display) { overflow-x:auto; overflow-y:hidden; padding:.5em 0; margin:1.2em 0; max-width:100%; }
+.noteMath td,.noteMath th { vertical-align:middle; }
+.noteMath td:has(:global(.katex)) { padding-top:14px; padding-bottom:14px; }
+.noteMath :global(.katex-error) { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.9em; }
+.asset { font-size:11px; color:var(--muted-foreground); }.reference { color:#a78bfa; }

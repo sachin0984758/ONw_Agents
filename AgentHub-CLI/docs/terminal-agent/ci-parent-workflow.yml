@@ -1,0 +1,30 @@
+name: AgentHub CLI Linux
+
+on:
+  push:
+    paths: ['AgentHub-CLI/**', '.github/workflows/agenthub-cli.yml']
+  pull_request:
+    paths: ['AgentHub-CLI/**', '.github/workflows/agenthub-cli.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: AgentHub-CLI
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          cache: npm
+          cache-dependency-path: AgentHub-CLI/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm run test:coverage
+      - run: npm run check:package
+      - run: npm audit --package-lock-only --audit-level=moderate

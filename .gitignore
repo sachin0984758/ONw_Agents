@@ -1,0 +1,99 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.next-iso/
+/.next-*/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+*.log
+dev.log
+dev.out.log
+test
+prompt
+
+server.log
+# Skills directory
+/skills/
+# agent-hub runtime data — chat history is user data, never source
+db/chat-history.json
+db/*.corrupt-*
+db/*.tmp
+# n8n integration: stored connection config may hold an API key — never commit
+db/n8n-config.json
+db/n8n-state.json
+
+# ── AgentHub runtime data (never commit) ─────────────────────────────────────
+# db/*.json holds live state and, in custom-models.json, custom-model API KEYS.
+db/*.json
+# Runtime records may also live in nested conversation/capability folders.
+/db/
+# Generated deliverables and scratch documents can contain personal information.
+/output/
+/tmp/
+# local verification artefacts and scratch/working dirs
+.verification/
+download/
+upload/
+.agenthub/
+.zscripts/
+tool-results/
+# stray build/lint output and screenshots
+build.err
+lint.err
+chat-screen.png
+
+# Prisma local dev database (local artifact; never commit)
+prisma/db/
+
+db/roadmaps/
+agenthub-computer/.venv/
+agenthub-computer/__pycache__/
+
+# Disposable test compilation and local Python test caches
+/.tmp-*/
+/.tmp-*/**
+/.pytest_cache/
+
+# Local generated companion projects are separate user work.
+/lmstudio-local-agent/workspace/projects/

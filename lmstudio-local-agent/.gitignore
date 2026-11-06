@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+config/settings.json
+config/lmstudio.mcp.json
+logs/*.log
+temp/*
+downloads/*
+!temp/.gitkeep
+!downloads/.gitkeep
+workspace/projects/**/node_modules/
+workspace/projects/**/dist/

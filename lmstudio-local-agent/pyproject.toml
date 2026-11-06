@@ -1,0 +1,9 @@
+[project]
+name = "lmstudio-local-agent"
+version = "1.0.0"
+description = "A bounded, Windows-first local MCP environment for LM Studio"
+requires-python = ">=3.11"
+dependencies = ["mcp==2.3.0"]
+
+[tool.uv]
+package = false

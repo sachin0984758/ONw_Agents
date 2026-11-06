@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "evidenceRoot": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-windows-stress-4xa0Kn",
+  "repository": {
+    "generatedFiles": 2500,
+    "scannedEntries": 160,
+    "truncated": true,
+    "elapsedMs": 1483
+  },
+  "memory": {
+    "concurrentFacts": 150,
+    "uniqueFacts": 150,
+    "elapsedMs": 4786
+  },
+  "sessions": {
+    "totalSaves": 100,
+    "maxConcurrentSaves": 20,
+    "loaded": 100,
+    "listed": 100,
+    "elapsedMs": 189
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "evidenceRoot": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-live-validation-h9Ka15",
+  "model": "spark-x2.6-4b",
+  "checks": [
+    {
+      "name": "chat and streaming",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "skill execution",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "read_skill"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "real file read",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "read_file"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "approved write",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "write_file"
+      ],
+      "limitations": [
+        "These checks verify recorded operations and available project checks; they do not prove every part of the user request was semantically fulfilled.",
+        "Token usage is estimated because the provider did not report it.",
+        "No test or check command was run after the file changes."
+      ]
+    },
+    {
+      "name": "denied write",
+      "status": "PASS",
+      "runStatus": "partial",
+      "streamed": true,
+      "tools": [
+        "write_file"
+      ],
+      "limitations": [
+        "One or more actions were denied, so the result may be incomplete.",
+        "Token usage is estimated because the provider did not report it.",
+        "1 action(s) were denied by policy or the user."
+      ]
+    },
+    {
+      "name": "tool failure handling",
+      "status": "PASS",
+      "runStatus": "partial",
+      "streamed": true,
+      "tools": [
+        "read_file"
+      ],
+      "limitations": [
+        "1 tool call(s) failed during the run; verify the requested work before treating it as complete.",
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "session persistence and audit",
+      "status": "PASS",
+      "sessionId": "ses_mvxdsmr1_x4aab2"
+    },
+    {
+      "name": "session recall without replay",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "approved shell command",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "run_command"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "denied shell command",
+      "status": "PASS",
+      "runStatus": "partial",
+      "streamed": true,
+      "tools": [
+        "run_command"
+      ],
+      "limitations": [
+        "One or more actions were denied, so the result may be incomplete.",
+        "Token usage is estimated because the provider did not report it.",
+        "1 action(s) were denied by policy or the user."
+      ]
+    },
+    {
+      "name": "file edit and backup",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "read_file",
+        "edit_file"
+      ],
+      "limitations": [
+        "These checks verify recorded operations and available project checks; they do not prove every part of the user request was semantically fulfilled.",
+        "Token usage is estimated because the provider did not report it.",
+        "No test or check command was run after the file changes."
+      ]
+    },
+    {
+      "name": "directory listing and search",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "list_dir",
+        "search_files"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "plan creation and completion",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "set_plan",
+        "update_plan"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "Git status inspection",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "git_status"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "real-model MCP discovery and call",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "mcp_list",
+        "mcp_call"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "real-model subagent",
+      "status": "PASS",
+      "runStatus": "completed",
+      "streamed": true,
+      "tools": [
+        "run_subagent"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ]
+    },
+    {
+      "name": "live streaming cancellation",
+      "status": "PASS",
+      "runStatus": "cancelled"
+    }
+  ]
+}

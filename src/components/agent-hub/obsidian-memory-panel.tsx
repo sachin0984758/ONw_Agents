@@ -1,0 +1,45 @@
+'use client'
+import { useCallback, useEffect, useState } from 'react'
+import { Brain, RefreshCw, Link2, FolderOpen } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ObsidianLibrary } from './obsidian-library'
+import { ObsidianFileAccess } from './obsidian-file-access'
+import { useRouter } from 'next/navigation'
+import type { ObsidianStatus, ObsidianVault } from '@/lib/agent-hub/obsidian/types'
+async function api(action?: string, extra: Record<string, unknown> = {}, query = '') {
+  const response = await fetch(`/api/obsidian${query}`, action ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, ...extra }) } : { cache: 'no-store' })
+  const data = await response.json()
+  if (!response.ok || !data.ok) throw new Error(data.error || 'Obsidian request failed.')
+  return data
+}
+export function ObsidianMemoryPanel() {
+  const router = useRouter()
+  const [revision, setRevision] = useState(0)
+  const [status, setStatus] = useState<ObsidianStatus | null>(null), [vaults, setVaults] = useState<ObsidianVault[]>([])
+  const [folder, setFolder] = useState('')
+  const [title, setTitle] = useState(''), [content, setContent] = useState(''), [busy, setBusy] = useState(false), [error, setError] = useState('')
+  const refresh = useCallback(async () => { setStatus((await api()).status) }, [])
+  useEffect(() => { let active = true; void api().then((data) => { if (active) setStatus(data.status) }).catch((e) => { if (active) setError(e.message) }); const reload = () => { void refresh().catch((e) => setError(e.message)) }; window.addEventListener('agenthub-memory-refresh', reload); return () => { active = false; window.removeEventListener('agenthub-memory-refresh', reload) } }, [refresh])
+  const run = async (work: () => Promise<void>) => { setBusy(true); setError(''); try { await work(); await refresh() } catch (e) { setError(e instanceof Error ? e.message : 'Memory operation failed.') } finally { setBusy(false) } }
+  return <section aria-label="Obsidian memory connection" className="rounded-2xl border border-violet-500/30 bg-card p-3 shadow-sm sm:p-5">
+    <header className="mb-5 flex flex-wrap items-start justify-between gap-4 rounded-2xl bg-gradient-to-br from-violet-500/10 to-transparent p-5"><div><p className="text-[10px] font-semibold uppercase tracking-[.18em] text-violet-500">OBSIDIAN · KNOWLEDGE LIBRARY</p><h2 className="mt-2 text-2xl font-semibold tracking-tight">{status?.connection?.name || 'A home for your ideas.'}</h2><p className="mt-2 text-xs text-muted-foreground">Read, connect, and put your knowledge to work.</p></div><span className="rounded-full border bg-background px-3 py-1.5 text-[11px]">{status?.available ? '● Connected' : '○ Not connected'} · {status?.noteCount.toLocaleString() || 0} notes · {status?.enabled ? 'Memory on' : 'Memory off'}</span></header>
+    {status?.available && status.connection && <ObsidianLibrary key={status.connection.id} connectionId={status.connection.id} revision={revision} />}
+    {status?.available && status.connection && <ObsidianFileAccess key={'files-' + status.connection.id} connectionId={status.connection.id} />}
+    <details className="mt-5 rounded-xl border bg-muted/20 p-4"><summary className="cursor-pointer text-xs font-medium">Connection settings &amp; agent session</summary>
+    <div className="mt-4 flex flex-wrap items-start justify-between gap-3"><div className="flex gap-3"><Brain className="mt-1 text-violet-500" /><div><h2 className="text-xl font-semibold">Obsidian · real local memory</h2><p className="mt-1 text-sm text-muted-foreground">Your vault files stay on this computer. Search, inspect sources, and review every new memory.</p></div></div><Button variant="outline" disabled={busy} onClick={() => void run(async () => { const data = await api(undefined, {}, '?op=discover'); setVaults(data.vaults); if (data.vaults[0]) setFolder(data.vaults[0].root) })}><Link2 size={15} />Add system Obsidian</Button></div>
+    {error && <p role="alert" className="mt-3 text-sm text-destructive">{error}</p>}
+    {vaults.length > 0 && <div className="mt-4 flex flex-wrap gap-2">{vaults.map((vault) => <Button key={vault.id} variant="outline" onClick={() => setFolder(vault.root)}>{vault.name}</Button>)}</div>}
+    <div className="mt-4 flex flex-wrap gap-2"><input aria-label="Obsidian vault folder" className="min-w-48 flex-1 rounded-lg border bg-background p-2 text-sm" placeholder="Full path to your Obsidian vault" value={folder} onChange={(e) => setFolder(e.target.value)} /><Button disabled={busy || !folder.trim()} onClick={() => void run(async () => { await api('connect', { path: folder }); window.dispatchEvent(new Event('agenthub-capabilities-refresh')) })}>Connect vault</Button></div>
+    {status?.connection && <>
+      <div className="mt-5 rounded-xl bg-muted/50 p-4"><div className="flex flex-wrap items-center justify-between gap-2"><strong>{status.connection.name}</strong><span className="text-xs">{status.available ? 'Connected' : 'Unavailable'} · {status.enabled ? 'Memory enabled' : 'Memory disabled'} · {status.noteCount.toLocaleString()} notes{status.scanLimited ? ' (bounded scan)' : ''}</span></div><p className="mt-2 break-all text-xs text-muted-foreground">{status.connection.root}</p><p className="mt-2 text-xs">Reads: local models only · Writes: review required · General Task assignment includes Chat, teaching, custom agents and Auto.</p>{status.error && <p role="alert">{status.error}</p>}<div className="mt-3 flex flex-wrap gap-2"><Button size="sm" variant="outline" disabled={busy} onClick={() => void run(async () => { await api('refresh'); setRevision((value) => value + 1) })}><RefreshCw size={14} />Refresh notes</Button><Button size="sm" variant="outline" disabled={busy} onClick={() => void run(async () => {
+        const response = await fetch('/api/agent-session/conversations', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'create', workspaceId: status.connection!.workspaceId, workspace: '.', effort: 'off' }) }); const data = await response.json(); if (!response.ok || !data.ok) throw new Error(data.error || 'Could not open session.'); const permission = await fetch('/api/agent-session/conversations', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'settings', id: data.conversation.id, workspaceAccess: 'read', mode: 'ro' }) }); if (!permission.ok) throw new Error('Could not grant read access.'); router.push(`/?view=sessions&session=${data.conversation.id}`)
+      })}><FolderOpen size={14} />Open vault session</Button><Button size="sm" variant="outline" disabled={busy} onClick={() => void run(async () => { await api('disconnect'); window.dispatchEvent(new Event('agenthub-capabilities-refresh')) })}>Disconnect memory</Button></div></div>
+    </>}
+    </details>
+    {status?.connection && <>
+      <details className="mt-4 rounded-xl border p-4"><summary className="cursor-pointer font-medium">Add a persistent memory</summary><p className="mt-2 text-xs text-muted-foreground">Creates a new note in AgentHub Memory only after you approve the exact text. Existing notes are never overwritten.</p><input aria-label="Memory title" placeholder="Memory title" value={title} onChange={(e) => setTitle(e.target.value)} className="mt-3 w-full rounded-lg border bg-background p-2 text-sm" /><textarea aria-label="Memory content" placeholder="What should AgentHub remember?" value={content} onChange={(e) => setContent(e.target.value)} className="mt-2 min-h-24 w-full rounded-lg border bg-background p-2 text-sm" /><Button disabled={busy || !title.trim() || !content.trim()} onClick={() => void run(async () => { await api('propose', { title, content }); setTitle(''); setContent('') })}>Prepare memory for review</Button></details>
+      {status.proposals.map((proposal) => <div key={proposal.id} className="mt-3 rounded-xl border border-amber-500/40 p-4"><strong>Review: {proposal.title}</strong><pre className="my-3 max-h-60 overflow-auto whitespace-pre-wrap text-sm">{proposal.content}</pre><p className="mb-2 text-xs">New file: AgentHub Memory/{proposal.id}.md</p><div className="flex gap-2">{[true, false].map((approved) => <Button key={String(approved)} disabled={busy} variant={approved ? 'default' : 'outline'} onClick={() => void run(async () => { await api('review', { id: proposal.id, hash: proposal.hash, approved }) })}>{approved ? 'Approve & save memory' : 'Decline'}</Button>)}</div></div>)}
+      <details className="mt-4 rounded-xl border p-4"><summary className="cursor-pointer text-sm font-medium">Memory activity · actual reads and saves</summary><ul className="mt-2 max-h-52 space-y-2 overflow-auto text-xs">{status.activity.map((item) => <li key={item.id} className="rounded-lg bg-muted/50 p-2"><strong>{item.action}</strong> · {item.scope} · {new Date(item.at).toLocaleString()}<span className="block break-all text-muted-foreground">{item.paths.join(' · ')}</span></li>)}</ul></details>
+    </>}
+  </section>
+}

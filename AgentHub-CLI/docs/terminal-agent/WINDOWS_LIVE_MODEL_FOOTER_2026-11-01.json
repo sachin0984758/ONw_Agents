@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "platform": "win32",
+  "provider": "lmstudio",
+  "liveModel": "spark-x2.6-4b",
+  "providerReportedLoaded": true,
+  "footerBeforeRun": "(lmstudio) spark-x2.6-4b · LIVE · idle",
+  "footerDuringRun": "(lmstudio) spark-x2.6-4b · LIVE · 0.1s",
+  "footerAfterRun": "(lmstudio) spark-x2.6-4b · LIVE · 2.24s",
+  "assistantResponse": "LIVE_OK",
+  "localModelRefreshIntervalMs": 10000,
+  "sessionId": "ses_mvxf7gn5_4wvf49",
+  "isolatedWorkspace": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-live-footer-45d3afa72779433295e3dee764ab3811\\workspace",
+  "isolatedHome": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-live-footer-45d3afa72779433295e3dee764ab3811\\home"
+}

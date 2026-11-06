@@ -1,0 +1,348 @@
+{
+  "scope": "42 original REVIEW files plus 7 newly orphaned dependencies",
+  "entries": [
+    {
+      "path": "agenthub-vm/Prepare-IsolatedVM.ps1",
+      "baseline": "REVIEW",
+      "decision": "REVIEW",
+      "reason": "VM setup was cancelled by the user. VirtualBox, guest ISO and guest enforcement are unavailable; these preparation-only files cannot prove actual guest containment. Retained without execution.",
+      "baselineSha256": "db115118b28eccdd23a5f08c6a5b6f8ebeca4459350057fa3f7dda91e5b4e28a"
+    },
+    {
+      "path": "agenthub-vm/README.md",
+      "baseline": "REVIEW",
+      "decision": "REVIEW",
+      "reason": "VM setup was cancelled by the user. VirtualBox, guest ISO and guest enforcement are unavailable; these preparation-only files cannot prove actual guest containment. Retained without execution.",
+      "baselineSha256": "4434537c9318ca30732ed563502bdf19e162ddcbe7df45f44285e74ccf01ea81"
+    },
+    {
+      "path": "agenthub-vm/Verify-IsolatedVM.ps1",
+      "baseline": "REVIEW",
+      "decision": "REVIEW",
+      "reason": "VM setup was cancelled by the user. VirtualBox, guest ISO and guest enforcement are unavailable; these preparation-only files cannot prove actual guest containment. Retained without execution.",
+      "baselineSha256": "feb19fd92cea316442a2ff7ed685fc084abefce29daa1b7e1583e4db18169a6b"
+    },
+    {
+      "path": "Caddyfile",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Used by .zscripts/build.sh and start.sh for optional preview proxy/deployment. Not part of the localhost Windows launcher.",
+      "baselineSha256": "e2115731014c27d72b80d9a828b90d12678846cc8f7fd87d26ed410b55cc249f"
+    },
+    {
+      "path": "examples/websocket/frontend.tsx",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Intentional standalone Socket.IO example paired with frontend/server and Caddy XTransformPort. No application import or automatic startup; documented as optional and unverified.",
+      "baselineSha256": "94eaf9fef36ef66e0e73a7dad4309e0eb80f75f93d31ec171b4fcced63ffb520"
+    },
+    {
+      "path": "examples/websocket/server.ts",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Intentional standalone Socket.IO example paired with frontend/server and Caddy XTransformPort. No application import or automatic startup; documented as optional and unverified.",
+      "baselineSha256": "62ac4471f2ea3b7c55c395f4df24fce8de1324f1bf1d51d7b16fa1680a46d0fe"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Schema is consumed by advertised db:* scripts and .zscripts database generation. Optional deployment contract retained; active app persistence is JSON, and no database migration was run.",
+      "baselineSha256": "83d9e5953e43b208cfaa010870fdf0089ddce1fce69473d48217af789ae19a7f"
+    },
+    {
+      "path": "scripts/check-sessions-layout.mjs",
+      "baseline": "REVIEW",
+      "decision": "REFACTOR",
+      "reason": "Legacy Sessions compatibility layout test retained; stale full-height assertion updated to include Auto and suite added to default verification.",
+      "baselineSha256": "10d03e74c03915f3b996c82efae22190caece8867e9c282a8d09117de3c96014"
+    },
+    {
+      "path": "src/components/agent-hub/explain/use-explain.ts",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "1fe0007046237fed16979e4ae5d0b5a0cd8975f551208494ecf3856d0c7a9a72"
+    },
+    {
+      "path": "src/components/ui/accordion.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "c1ccb5f84c26e197da324cf23f640e01a0ea364cfe67c1752db938ae240d7057"
+    },
+    {
+      "path": "src/components/ui/alert-dialog.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "d8e19c4f7465c1a214bbb1b07c2ffde7501ad2c9a2d282d6c622a103f8cb14de"
+    },
+    {
+      "path": "src/components/ui/alert.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "dc78e1d0b66138fc625777697f9c8da4a75722bb851f35e605336a86924048cf"
+    },
+    {
+      "path": "src/components/ui/aspect-ratio.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "796290f6f5c722129974e971f774e238747097d8c5d0ad2edbd11a26d52cd17f"
+    },
+    {
+      "path": "src/components/ui/avatar.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "ef912ab3f1826542b8e9d42d99e7df6fd90d96770f4fb0e4a3ae77c3101e4bdc"
+    },
+    {
+      "path": "src/components/ui/breadcrumb.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "b0a848d8d3e43670d0149d56c9eaf6a5a76f1f7212a36f2724a53dbb5ce8058c"
+    },
+    {
+      "path": "src/components/ui/calendar.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "d796a54ef41849b91a53bfe6bf911e6943c9e1aa4e0b8feacc729adbfbbc975c"
+    },
+    {
+      "path": "src/components/ui/carousel.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "e2d53f083b91a997a502c02e5f77530593038c19470a75146c01ec7add381cdc"
+    },
+    {
+      "path": "src/components/ui/chart.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "e38c59c3e88959a7399a5121d7b888c7560bf9577b469dce6a9ec687b0fa4fe6"
+    },
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "5a354bf8658f0180c8476669c51ee392b83de134b484d4dce8502a61bb68250f"
+    },
+    {
+      "path": "src/components/ui/collapsible.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "18a136f3271b1945554b183b1eb778bebb8a11a8f758e17a6881f5542dfe19a1"
+    },
+    {
+      "path": "src/components/ui/command.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "9dd966da9e3d9acb74014bb80df8e72257e973be822c22276c1371d804c43dd2"
+    },
+    {
+      "path": "src/components/ui/context-menu.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "715846e271be400fc9fe8ea0b240b12dc5c277848c367fa1f2f76c70ca583204"
+    },
+    {
+      "path": "src/components/ui/drawer.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "75c2405bff7abc2361e933b2901f67c989def3f1aa2d2fc644555461c1784603"
+    },
+    {
+      "path": "src/components/ui/dropdown-menu.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "6a33e5f113e1552196c05c111b05256088fca9b5260b9bb714dc5a1346e42d8b"
+    },
+    {
+      "path": "src/components/ui/form.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "03454ce53044c3e8546136c285f18c8949e52b91ece7f2e60d26e1d5a2d5a4df"
+    },
+    {
+      "path": "src/components/ui/input-otp.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "86188df3392898fd8701b9eacc8b3db3909b2346f18da4e9b4fd0a0af8209fb2"
+    },
+    {
+      "path": "src/components/ui/menubar.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "64c253706ecd4c2b3c27caa416b48910a3786cc0769b1553834dd81dd1a3f649"
+    },
+    {
+      "path": "src/components/ui/navigation-menu.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "382e26fb9d9182c58058eb26b3cdeb2de6bc402b92449990b7aff4b8e2da20da"
+    },
+    {
+      "path": "src/components/ui/pagination.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "ce2f6679702d9b537429b670ba8a423c478435d23ca95b249000bf6201819be1"
+    },
+    {
+      "path": "src/components/ui/radio-group.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "1857ce846875ebad71ac81979cb06c256566bb5e1c18125f21ca108774804562"
+    },
+    {
+      "path": "src/components/ui/resizable.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "50c25298162e60affae4c638db061ae31e17023b80bccaf529a90a2d65a16c03"
+    },
+    {
+      "path": "src/components/ui/sidebar.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "40c609840bbed0dc9fbb96c431c13d20a3fdd7b5bfa3e93b6f37ed73bb47594d"
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "a62ec27d243a23e3126665e360ec4c500d6fe853efb6a7eb4182033bf1baf86e"
+    },
+    {
+      "path": "src/components/ui/sonner.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "29b9b6311ade1a1c5d6ceb87e6e7b79a19ec7e0bc3c0d684bfe570aadeec41e2"
+    },
+    {
+      "path": "src/components/ui/table.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "3499c3195b236768875a5b06ea2a6f8bc91d69c6f11c8c832517289ca2841b25"
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "cb2ec47961e59b0d990a6a93ea8074802ef3d1094276bf263d7178e8bc27da15"
+    },
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "2944aed195e62d24b13b8e26e1a5534ff97c4027ce0e8331c62c84695ac083bd"
+    },
+    {
+      "path": "src/components/ui/toggle-group.tsx",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "e1dd7e3579c32e66526d6fa77ac235ba8a6bde28db3a3cab5c22902483fa1736"
+    },
+    {
+      "path": "src/lib/db.ts",
+      "baseline": "REVIEW",
+      "decision": "DELETE",
+      "reason": "No application, test, entry-point or dynamic registry consumer. Unused template/helper source; reference evidence and SHA-256 recorded before deletion. Existing active feature implementations preserved.",
+      "baselineSha256": "1abf8bc65c02b6f788205d64f4ed00f4c58a5529802a58c54afa6566e4c1a266"
+    },
+    {
+      "path": "tests/database-runtime-build.sh",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Regression coverage for the matching .zscripts optional deployment/runtime scripts. Shell/container prerequisites reported separately; not an obsolete application entry point.",
+      "baselineSha256": "6e181130660f4c075b153732458b05be590c41976906073b877cc30759f2a98a"
+    },
+    {
+      "path": "tests/python-runtime-build.sh",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Regression coverage for the matching .zscripts optional deployment/runtime scripts. Shell/container prerequisites reported separately; not an obsolete application entry point.",
+      "baselineSha256": "85036541781fcae0fee4001a365fbe3149a9d5d5fb5fb753169905d36540e810"
+    },
+    {
+      "path": "tests/python-runtime-container.sh",
+      "baseline": "REVIEW",
+      "decision": "KEEP",
+      "reason": "Regression coverage for the matching .zscripts optional deployment/runtime scripts. Shell/container prerequisites reported separately; not an obsolete application entry point.",
+      "baselineSha256": "c47b40af9b800d656a391f7c79eaf601a4cf344a45315d5c42e5fd6f4adcebb2"
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "9694e54f22b55c5046cb605c5212b88f963d2a0493dd3262d169d74f1bb861ab"
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "35eec7c90f982be9e8f12de58f4aa9f00b29f9baf8c41e4363a35d90ac39f9dd"
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "88dbe346a713917624545cfcff1db18a1d6e6f5718aa43ddd9169907ea568f4f"
+    },
+    {
+      "path": "src/components/ui/sheet.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "dd270f5ad2a887963b965eafb13b3989a1674e6fe73c3b7f6cc5348ba77b4692"
+    },
+    {
+      "path": "src/components/ui/skeleton.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "5e045dc0265a2a7ea183bb689b440068b9b18b59affc7039efd85ad1bd083ad8"
+    },
+    {
+      "path": "src/components/ui/toggle.tsx",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "07344aacfbb0d84b0cf2172d0f35c3a1f59ac83e93022017c893598339930b3e"
+    },
+    {
+      "path": "src/hooks/use-mobile.ts",
+      "baseline": "KEEP",
+      "decision": "DELETE",
+      "reason": "Became unreachable after removal of unused template consumers. No remaining static/dynamic application, test or optional example import.",
+      "baselineSha256": "c4eef13307bffb32bc0ce41e209fa298b4dab73ebc27a3ec7a4923c813be91c7"
+    }
+  ]
+}

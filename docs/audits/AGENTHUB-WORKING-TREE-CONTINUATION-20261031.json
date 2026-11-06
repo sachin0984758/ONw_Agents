@@ -1,0 +1,26 @@
+{
+  "capturedAt": "2026-10-31T15:50:38.802Z",
+  "statusEntries": 277,
+  "expandedFiles": 584,
+  "categories": {
+    "root configuration/build/dependency change": 7,
+    "documentation/history; preserve and review": 112,
+    "deleted tracked material; intent requires owner review": 42,
+    "asset/design change; visual review required": 10,
+    "verification/build tooling": 66,
+    "application implementation": 161,
+    "companion/package change; review independently": 105,
+    "user-created deliverable; preserve separately": 81
+  },
+  "credentialCandidates": [
+    {
+      "path": "AgentHub-CLI/tests/context.test.ts",
+      "flags": "private-key-marker"
+    },
+    {
+      "path": "scripts/check-ui-components.ts",
+      "flags": "private-key-marker"
+    }
+  ],
+  "coverage": "Every status entry classified; expanded nonignored files fingerprinted and text scanned. This does not establish authorship or full semantic correctness."
+}

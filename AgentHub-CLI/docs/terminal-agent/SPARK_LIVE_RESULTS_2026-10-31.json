@@ -1,0 +1,207 @@
+{
+  "date": "2026-10-31",
+  "model": "spark-x2.6-4b",
+  "loadedContextTokens": 11264,
+  "broadRun": {
+    "status": "FAIL",
+    "passed": 16,
+    "failed": 1,
+    "checks": [
+      {
+        "name": "chat and streaming",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [],
+        "error": null
+      },
+      {
+        "name": "skill execution",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "list_skills",
+          "read_skill"
+        ],
+        "error": null
+      },
+      {
+        "name": "real file read",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "read_file"
+        ],
+        "error": null
+      },
+      {
+        "name": "approved write",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "write_file"
+        ],
+        "error": null
+      },
+      {
+        "name": "denied write",
+        "status": "PASS",
+        "runStatus": "partial",
+        "tools": [
+          "write_file"
+        ],
+        "error": null
+      },
+      {
+        "name": "tool failure handling",
+        "status": "PASS",
+        "runStatus": "partial",
+        "tools": [
+          "read_file"
+        ],
+        "error": null
+      },
+      {
+        "name": "session persistence and audit",
+        "status": "PASS",
+        "runStatus": null,
+        "tools": null,
+        "error": null
+      },
+      {
+        "name": "session recall without replay",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [],
+        "error": null
+      },
+      {
+        "name": "approved shell command",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "run_command"
+        ],
+        "error": null
+      },
+      {
+        "name": "denied shell command",
+        "status": "PASS",
+        "runStatus": "partial",
+        "tools": [
+          "run_command"
+        ],
+        "error": null
+      },
+      {
+        "name": "file edit and backup",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "read_file",
+          "edit_file",
+          "read_file"
+        ],
+        "error": null
+      },
+      {
+        "name": "directory listing and search",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "list_dir",
+          "search_files"
+        ],
+        "error": null
+      },
+      {
+        "name": "plan creation and completion",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "set_plan",
+          "update_plan"
+        ],
+        "error": null
+      },
+      {
+        "name": "Git status inspection",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "git_status"
+        ],
+        "error": null
+      },
+      {
+        "name": "real-model MCP discovery and call",
+        "status": "FAIL",
+        "runStatus": "partial",
+        "tools": [
+          "mcp_list",
+          "mcp_call"
+        ],
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'partial'\n- 'completed'\n"
+      },
+      {
+        "name": "real-model subagent",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "run_subagent"
+        ],
+        "error": null
+      },
+      {
+        "name": "live streaming cancellation",
+        "status": "PASS",
+        "runStatus": "cancelled",
+        "tools": null,
+        "error": null
+      }
+    ]
+  },
+  "focusedMcpRerun": {
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "real-model MCP discovery and call",
+        "status": "PASS",
+        "runStatus": "completed",
+        "tools": [
+          "mcp_list",
+          "mcp_call"
+        ]
+      }
+    ]
+  },
+  "distinctWorkflowChecksWithPassingEvidence": 17,
+  "cli": {
+    "Status": "PASS",
+    "ExitCode": 0,
+    "RunStatus": "completed",
+    "Model": "spark-x2.6-4b",
+    "ToolRead": 1,
+    "ExactFileProofReturned": true,
+    "SessionSaved": true,
+    "SavedStatus": "completed",
+    "ANSIInJSON": false,
+    "EvidenceRoot": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-live-cli-78120c248b234253b95c7030d19e3bb2"
+  },
+  "doctor": {
+    "ok": true,
+    "toolProbe": {
+      "status": "supported",
+      "model": "spark-x2.6-4b",
+      "provider": "lmstudio",
+      "detail": "Returned tool call \"get_clock\"."
+    }
+  },
+  "automated": {
+    "passed": 134,
+    "failed": 0,
+    "skipped": 0,
+    "lineCoverage": 75.94,
+    "branchCoverage": 67.66,
+    "functionCoverage": 76.87
+  }
+}

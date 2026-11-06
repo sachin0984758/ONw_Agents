@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-01",
+  "status": "PASS",
+  "evidenceRoot": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-remaining-live-jIopxy",
+  "model": "spark-x2.6-4b",
+  "checks": [
+    {
+      "name": "explicit automatic memory extraction",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [
+        "list_dir"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxcs0do_m84kov"
+    },
+    {
+      "name": "fresh-session memory retrieval",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxcsdiv_yp0kzj"
+    },
+    {
+      "name": "dependency-aware plan",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [
+        "set_plan",
+        "update_plan",
+        "update_plan"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxcskra_2ie4yj"
+    },
+    {
+      "name": "post-edit automatic test verification",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [
+        "write_file",
+        "run_command"
+      ],
+      "limitations": [
+        "These checks verify recorded operations and available project checks; they do not prove every part of the user request was semantically fulfilled.",
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxct5r9_j317kn"
+    },
+    {
+      "name": "specialized agent pool",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [
+        "run_agents"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxctbn2_5jafq4"
+    },
+    {
+      "name": "read-only code review",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [
+        "read_file"
+      ],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxcuwwd_y4am00"
+    },
+    {
+      "name": "interrupted write recovery without replay",
+      "status": "PASS",
+      "runStatus": "completed",
+      "tools": [],
+      "limitations": [
+        "Token usage is estimated because the provider did not report it."
+      ],
+      "sessionId": "ses_mvxcvwdu_0etf6p"
+    },
+    {
+      "name": "observed provider capabilities persisted",
+      "status": "PASS",
+      "capabilities": {
+        "streaming": {
+          "supported": true,
+          "source": "observed",
+          "at": "2026-11-01T04:54:52.161Z"
+        },
+        "tools": {
+          "supported": true,
+          "source": "observed",
+          "at": "2026-11-01T04:54:07.615Z"
+        }
+      }
+    }
+  ]
+}

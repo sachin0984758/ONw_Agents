@@ -1,0 +1,33 @@
+{
+  "name": "AgentHub-CLI",
+  "version": "0.1.0",
+  "description": "AgentHub Terminal - a local-first terminal coding agent",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "agenthub": "./bin/agenthub.mjs"
+  },
+  "files": ["bin/", "dist/", "README.md", "LICENSE", "docs/terminal-agent/"],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "npm run build",
+    "check:package": "node scripts/check-package.mjs",
+    "check:local-model": "node scripts/check-local-model.mjs",
+    "check:remaining-live": "node scripts/check-remaining-features.mjs",
+    "check:windows-stress": "node scripts/check-windows-stress.mjs",
+    "start": "node src/cli/main.ts",
+    "doctor": "node src/cli/main.ts doctor",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "test:coverage": "node --experimental-test-coverage --test \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT"
+}

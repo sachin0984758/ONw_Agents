@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "templateId": "editorial",
+  "theme": "dark",
+  "palette": "slate",
+  "accent": "",
+  "typography": "serif",
+  "navbar": "floating",
+  "hero": "centered",
+  "footer": "columns",
+  "button": "solid",
+  "card": "elevated",
+  "sections": [
+    {
+      "id": "features-1",
+      "kind": "features",
+      "variant": "grid-3"
+    },
+    {
+      "id": "gallery-2",
+      "kind": "gallery",
+      "variant": "grid"
+    },
+    {
+      "id": "testimonials-3",
+      "kind": "testimonials",
+      "variant": "cards"
+    },
+    {
+      "id": "pricing-4",
+      "kind": "pricing",
+      "variant": "three-tier"
+    },
+    {
+      "id": "contact-5",
+      "kind": "contact",
+      "variant": "split"
+    }
+  ],
+  "content": {
+    "brand": "Marrow",
+    "tagline": "Independent studio",
+    "headline": "Stories worth slowing down for.",
+    "subhead": "A premium editorial layout for studios that treat words and whitespace as the product.",
+    "ctaPrimary": "Read the journal",
+    "ctaSecondary": "Our services",
+    "contactEmail": "hello@example.com"
+  }
+}

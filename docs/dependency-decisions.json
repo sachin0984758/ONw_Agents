@@ -1,0 +1,223 @@
+{
+  "removed": [
+    {
+      "package": "@dnd-kit/core",
+      "previousRange": "^6.3.1",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@dnd-kit/sortable",
+      "previousRange": "^10.0.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@dnd-kit/utilities",
+      "previousRange": "^3.2.2",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@hookform/resolvers",
+      "previousRange": "^5.1.1",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@mdxeditor/editor",
+      "previousRange": "^3.39.1",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-accordion",
+      "previousRange": "^1.2.11",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-alert-dialog",
+      "previousRange": "^1.1.14",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-aspect-ratio",
+      "previousRange": "^1.1.7",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-avatar",
+      "previousRange": "^1.1.10",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-checkbox",
+      "previousRange": "^1.3.2",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-collapsible",
+      "previousRange": "^1.1.11",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-context-menu",
+      "previousRange": "^2.2.15",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-dialog",
+      "previousRange": "^1.1.14",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-dropdown-menu",
+      "previousRange": "^2.1.15",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-label",
+      "previousRange": "^2.1.7",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-menubar",
+      "previousRange": "^1.1.15",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-navigation-menu",
+      "previousRange": "^1.2.13",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-radio-group",
+      "previousRange": "^1.3.7",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-separator",
+      "previousRange": "^1.1.7",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-slider",
+      "previousRange": "^1.3.5",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-tabs",
+      "previousRange": "^1.1.12",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-toggle",
+      "previousRange": "^1.1.9",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@radix-ui/react-toggle-group",
+      "previousRange": "^1.1.10",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@reactuses/core",
+      "previousRange": "^6.0.5",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@tanstack/react-query",
+      "previousRange": "^5.82.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "@tanstack/react-table",
+      "previousRange": "^8.21.3",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "cmdk",
+      "previousRange": "^1.1.1",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "date-fns",
+      "previousRange": "^4.1.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "embla-carousel-react",
+      "previousRange": "^8.6.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "framer-motion",
+      "previousRange": "^12.23.2",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "input-otp",
+      "previousRange": "^1.4.2",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "next-auth",
+      "previousRange": "^4.24.11",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "next-intl",
+      "previousRange": "^4.3.4",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "react-day-picker",
+      "previousRange": "^9.8.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "react-hook-form",
+      "previousRange": "^7.60.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "react-resizable-panels",
+      "previousRange": "^3.0.3",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "sonner",
+      "previousRange": "^2.0.6",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "vaul",
+      "previousRange": "^1.1.2",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "uuid",
+      "previousRange": "^11.1.0",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "z-ai-web-dev-sdk",
+      "previousRange": "^0.0.18",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    },
+    {
+      "package": "bun-types",
+      "previousRange": "^1.3.4",
+      "reason": "No active source import, dynamic provider registration, configuration or deployment dependency; template-only users were removed."
+    }
+  ],
+  "added": [
+    {
+      "package": "@types/node",
+      "range": "^24.19.2",
+      "reason": "Explicit Node 24 type dependency replaces accidental transitive types from unused bun-types."
+    }
+  ],
+  "retainedImplicit": [
+    "sharp: Next.js native image runtime",
+    "@prisma/client and prisma: optional schema generation and db:* deployment scripts",
+    "tw-animate-css: CSS import",
+    "@types/react, @types/react-dom, @types/three, @types/d3-force: TypeScript contracts"
+  ],
+  "optionalLockfile": "bun.lock retained because .zscripts invokes Bun; stale and not verified because Bun is unavailable. package-lock.json is updated by npm."
+}

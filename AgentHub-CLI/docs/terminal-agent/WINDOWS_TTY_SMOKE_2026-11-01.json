@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "provider": "lmstudio",
+  "model": "spark-x2.6-4b",
+  "tty": true,
+  "prompt": "Reply exactly TTY_OK. No tool calls.",
+  "assistantResponse": "TTY_OK",
+  "slashCommand": "/help",
+  "exit": "Ctrl+D",
+  "sessionId": "ses_mvxdyxit_fp31sr",
+  "sessionStatus": "completed",
+  "isolatedWorkspace": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-tty-smoke-a0e3afa71e80443686f8ff14cd4162b5\\workspace",
+  "isolatedHome": "C:\\Users\\SACHIN\\AppData\\Local\\Temp\\agenthub-tty-smoke-a0e3afa71e80443686f8ff14cd4162b5\\home"
+}

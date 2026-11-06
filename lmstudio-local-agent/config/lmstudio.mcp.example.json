@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "lmstudio-local-agent": {
+      "command": "C:\\PATH\\TO\\lmstudio-local-agent\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "agent_env.server"],
+      "cwd": "C:\\PATH\\TO\\lmstudio-local-agent",
+      "env": {
+        "LOCAL_AGENT_HOME": "C:\\PATH\\TO\\lmstudio-local-agent",
+        "AGENT_WORKSPACE": "C:\\PATH\\TO\\lmstudio-local-agent\\workspace"
+      }
+    }
+  }
+}
